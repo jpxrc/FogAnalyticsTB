@@ -5,7 +5,12 @@ sudo pip install tensorflow
 sudo apt-get install protobuf-compiler python-pil python-lxml
 sudo apt-get install  python-tk
 sudo pip install  matplotlib
+sudo apt-get install zip unzip
 
+wget https://github.com/junostar/FogAnalyticsTB/archive/master.zip
+#wget https://github.com/junostar/FogAnalyticsTB.zip
+unzip FogAnalyticsTB.zip
+rm FogAnalyticsTB.zip
 cd lib
 wget https://github.com/tensorflow/models/archive/master.zip
 unzip master.zip
