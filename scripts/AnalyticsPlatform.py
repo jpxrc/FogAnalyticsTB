@@ -46,26 +46,18 @@ expType = sys.argv[1]
 
 # Transmission dataset is used
 if expType == 'transmission':
-    inputFeatures = pd.DataFrame(pd.read_csv('Data\TxExp_Master.csv'), columns=['Transmission_BW (bps)','ImgHeight','ImgWidth','Datasize (bits)','Tx_calc'])
-    targetFeatures = pd.DataFrame(pd.read_csv('Data\TxExp_Master.csv'), columns=['Link_Utilization'])
+    inputFeatures = pd.DataFrame(pd.read_csv('../data/TxExp_Master.csv'), columns=['Transmission_BW (bps)','ImgHeight','ImgWidth','Datasize (bits)','Tx_calc'])
+    targetFeatures = pd.DataFrame(pd.read_csv('../data/TxExp_Master.csv'), columns=['Link_Utilization'])
     X = inputFeatures
     y = targetFeatures['Link_Utilization']
     print('\nBenchmarking ML models on the',expType,'dataset...\n')
 # Processing dataset is used
 elif expType == 'processing':
-    inputFeatures = pd.DataFrame(pd.read_csv('Data\TpExp_Master.csv'), columns=['Spec Type','CPU Load (%)','imgHeight','imgWidth','datasize'])
-    targetFeatures = pd.DataFrame(pd.read_csv('Data\TpExp_Master.csv'), columns=['T_p'])
+    inputFeatures = pd.DataFrame(pd.read_csv('../data/TpExp_Master.csv'), columns=['Spec Type','CPU Load (%)','imgHeight','imgWidth','datasize'])
+    targetFeatures = pd.DataFrame(pd.read_csv('../data/TpExp_Master.csv'), columns=['T_p'])
     X = inputFeatures
     y = targetFeatures['T_p']
     print('\nBenchmarking ML models on the', expType, 'dataset...\n')
-# Pipeline dataset is used
-elif expType == 'pipeline':
-    inputFeatures = pd.DataFrame(pd.read_csv('Data\pipeline.csv'), columns=['datasize', 'imgHeight', 'imgWidth', 'preprocessing', 'object_detection', 'face_detection'])
-    targetFeatures = pd.DataFrame(pd.read_csv('Data\pipeline.csv'), columns=['total_time'])
-    X = inputFeatures
-    y = targetFeatures['total_time']
-    print('\nBenchmarking ML models on the', expType, 'dataset...\n')
-
 else:
     print ('Please enter a valid dataset (experiment) name.')
     exit()
