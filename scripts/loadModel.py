@@ -72,7 +72,7 @@ def load_image_into_numpy_array(image):
         (im_height, im_width, 3)).astype(np.uint8)
 
 
-PATH_TO_TEST_IMAGES_DIR = '/usr/local/ExpImg/'
+PATH_TO_TEST_IMAGES_DIR = '/usr/local/FogAnalyticsTB-master/scripts/ExpImg_10'
 
 #TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'img{}.png'.format(i)) for i in range(1, 101) ]
 TEST_IMAGE_PATHS = [(PATH_TO_TEST_IMAGES_DIR + file) for file in os.listdir(PATH_TO_TEST_IMAGES_DIR) if file.endswith('.png')]

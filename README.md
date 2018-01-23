@@ -12,6 +12,7 @@ Workflow: configure SDN controller -> configure openflow switches -> reserve res
 I.a) Testbed Setup:
 
 * - Note: be sure to use the latest distribution located at: https://github.com/junostar/FogAnalyticsTB/archive/master.tar.gz
+    Note: Due to storage and download times, the input images have been reduced from the orignal 100 to 10 images for demonstration purposes.
 
 I.a.1) Configure SDN controller:
     a) download the FogATB_ctrl_rspec.xml file from the project repo*
@@ -53,7 +54,7 @@ I.b.1) Execute script for running transmission experiments
     c) cd FogAnalyticsTB-master/scripts # This is the main directory is where the main scripts reside for running experiments and evaluation
     d) You can edit the script file and change the file destination (e.g. h1, h2, etc.) on line #17 where the SCP command is being executed.
     d) $ sudo bash TxExp.sh
-    e) The script will process the 100 images located in the /input/ExpImg_100 directory and will produce an output file /output/Tx_output.txt 
+    e) The script will process the 10 images located in the /input/ExpImg_10 directory and will produce an output file /output/Tx_output.txt 
     f) The directory .csv files located in the /data directory is a composite of all data from each individual experiment in order to create a range of features values. 
 
 =========================================================
@@ -80,8 +81,8 @@ I.b.1) Execute script for running transmission experiments
     b) Execute the Tensorflow object detection script (You might need to login to a new terminal if stress-ng is running:
         $ cd FogAnalytics_TB-master/scripts/
         $ python loadModel.py
-    c) The script will use the same set of images as before located in /input/ExpImg_100 to measure the local processing time for the current machine's specs.
-    e) The script will process the 100 images located in the /input/ExpImg_100 directory and will produce an output file /output/Tp_output.csv 
+    c) The script will use the same set of images as before located in /input/ExpImg_10 to measure the local processing time for the current machine's specs.
+    e) The script will process the 10 images located in the /input/ExpImg_10 directory and will produce an output file /output/Tp_output.csv 
     f) The TxExp.csv file located in the /data directory is a composite of all data from each individual experiment in order to create a range of features values for the training dataset. 
 
 

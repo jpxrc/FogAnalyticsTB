@@ -21,6 +21,3 @@ protoc object_detection/protos/*.proto --python_out=.
 
 cd ..
 sudo rm -r models-master/
-cd ..
-
-python pipeline.py test
