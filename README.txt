@@ -102,10 +102,10 @@ III.b) Evaluate prediction performance of Machine Learning models:
         $ python AnalyticsPlatform processing
         $ python AnalyticsPlatform pipeline
     b) The performance results are displayed in the terminal as the 'Mean Average Error (MAE)' and 'Root Mean-Squared Error (RMSE)', respectively.
-    c) The time spent training the model and the making predictions is also reported and can be used to gather statistics about deployment latencies. 
+    c) You can combine the respective errors from both datasets for each model in order to have the total combined error for end-to-end delay predictions.
+    d) The time spent training the model and the making predictions is also reported and can be used to gather statistics about deployment latencies. 
 
 III.c) Repeat Sections I-II and vary the feature parameters
 
 
-IV. Distributed Image Processing Study (IN PROGRESS)
 =========================================================
