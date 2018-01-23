@@ -8,11 +8,9 @@ sudo apt-get install protobuf-compiler python-pil python-lxml
 sudo apt-get install  python-tk
 sudo pip install  matplotlib
 sudo apt-get install zip unzip
+sudo apt-get install imagemagick
+sudo chmod 777 /usr/local
 
-# wget https://github.com/junostar/FogAnalyticsTB/archive/master.zip
-# #wget https://github.com/junostar/FogAnalyticsTB.zip
-# unzip FogAnalyticsTB.zip
-# sudo rm FogAnalyticsTB.zip
 cd lib
 wget https://github.com/tensorflow/models/archive/master.zip
 unzip master.zip
@@ -26,6 +24,3 @@ sudo rm -r models-master/
 cd ..
 
 python pipeline.py test
-
-
-#wget --no-check-certificate https://github.com/junostar/FogAnalyticsTB/archive/master.tar.gz
