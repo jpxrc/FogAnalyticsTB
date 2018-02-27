@@ -72,7 +72,7 @@ def load_image_into_numpy_array(image):
         (im_height, im_width, 3)).astype(np.uint8)
 
 
-PATH_TO_TEST_IMAGES_DIR = '/usr/local/FogAnalyticsTB-master/scripts/ExpImg_10'
+PATH_TO_TEST_IMAGES_DIR = '/usr/local/FogAnalyticsTB-master/scripts/ExpImg_10/'
 
 #TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'img{}.png'.format(i)) for i in range(1, 101) ]
 TEST_IMAGE_PATHS = [(PATH_TO_TEST_IMAGES_DIR + file) for file in os.listdir(PATH_TO_TEST_IMAGES_DIR) if file.endswith('.png')]
@@ -120,11 +120,12 @@ with detection_graph.as_default():
       #plt.figure(figsize=IMAGE_SIZE)
       elapsed = timeit.default_timer() - start_time
       #print('Img'+ str(imgNum)+'.png', elapsed)
-      OUTPUT_FILEPATH = '/usr/local/output/'+ str(imgNum) +'.png'
+      OUTPUT_FILEPATH = '/usr/local/FogAnalyticsTB-master/output/'+ str(imgNum) +'.png'
       plt.imsave(OUTPUT_FILEPATH,image_np, cmap=plt.cm.jet)
       dataList.append([str(imgNum)+'.png', os.path.getsize(OUTPUT_FILEPATH), height, width, elapsed])
 
 columns = ['filename', 'datasize', 'imgHeight', 'imgWidth', 'T_p']
 df = pd.DataFrame(dataList, columns=columns)
 df.to_csv('/usr/local/output/output.csv')
+print ('All images processed successfully!')
 
