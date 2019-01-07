@@ -80,7 +80,7 @@ I.b.1) Execute script for running transmission experiments
         $ stress-ng --cpu 0 -l P   # P represents the percentage of CPU load to add (e.g. 25 for 25%)
     b) Execute the Tensorflow object detection script (You might need to login to a new terminal if stress-ng is running:
         $ cd FogAnalytics_TB-master/scripts/
-        $ python loadModel.py
+        $ python TpExp.py
     c) The script will use the same set of images as before located in /input/ExpImg_10 to measure the local processing time for the current machine's specs.
     e) The script will process the 10 images located in the /input/ExpImg_10 directory and will produce an output file /output/Tp_output.csv 
     f) The TxExp.csv file located in the /data directory is a composite of all data from each individual experiment in order to create a range of features values for the training dataset. 
